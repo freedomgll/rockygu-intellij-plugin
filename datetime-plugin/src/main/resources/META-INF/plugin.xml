@@ -1,0 +1,33 @@
+<idea-plugin>
+    <id>pers.rockygu.plugin</id>
+    <name>Datetime</name>
+    <vendor>rockygu</vendor>
+    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <action
+          id="DatetimeConvert.Editor"
+          class="pers.rockygu.plugin.datetime.DatetimeAction"
+          text="Datetime convert..."
+          description="Datetime convert...">
+            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+            <keyboard-shortcut keymap="Mac OS X" first-keystroke="control meta T" replace-all="true"/>
+            <keyboard-shortcut keymap="Mac OS X 10.5+" first-keystroke="control meta T" replace-all="true"/>
+        </action>
+        <action
+          id="DatetimeConvert.Console"
+          class="pers.rockygu.plugin.datetime.DatetimeAction"
+          text="Datetime convert..."
+          description="Datetime convert...">
+            <add-to-group group-id="ConsoleEditorPopupMenu" anchor="last"/>
+            <keyboard-shortcut keymap="Mac OS X" first-keystroke="control meta T" replace-all="true"/>
+            <keyboard-shortcut keymap="Mac OS X 10.5+" first-keystroke="control meta T" replace-all="true"/>
+        </action>
+    </actions>
+</idea-plugin>

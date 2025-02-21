@@ -1,0 +1,2 @@
+rootProject.name = 'rockygu-intellij-plugin'
+include 'datetime-plugin'
